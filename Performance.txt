@@ -1,0 +1,80 @@
+
+Agregar Performance 
+
+Lazy
+
+Agregar loading="lazy" en las imágenes para que se descarguen conforme se utilicen.
+
+==========================================================================================
+
+Preload
+
+Carga elementos necesarios o que deben cargarse lo más pronto posible
+
+<!-- Preload -->
+<link rel="preload" href="css/normalize.css" as="style">
+<link rel="stylesheet" href="css/normalize.css">
+    
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" crossorigin="crossorigin" as="font">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
+<link rel="preload" href="css/styles.csss" as="style">
+<link rel="stylesheet" href="css/styles.css">
+
+<link rel="preload" href="img/blog1.jpg" as="image">
+
+==========================================================================================
+
+Prefetch
+
+Carga la siguiente página que se espera se visite para mejorar la experiencia del usuario.
+
+<!-- Prefetch -->
+<link rel="prefetch" href="nosotros.html" as="document">
+
+==========================================================================================
+
+Formatos más ligeros para las imágenes
+
+-webp
+
+<picture>
+    <source src="img/blog1.webp" type="image/webp">
+    <img loading="lazy" src="img/blog1.jpg" alt="imagen blog">
+</picture>
+
+-Modernizr y webp
+
+https://modernizr.com/download?webp-setclasses&q=web
+
+Se agrega el código a un archivo js 
+
+En CSS
+
+/* header */
+.webp .header {
+    background-image: url(../img/banner.webp);
+}
+
+.no-webp .header {
+    background-image: url(../img/banner.jpg);
+}
+
+.header {
+    height: 60rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+==========================================================================================
+
+Etiquetas Meta
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Página web de blog de café">
+
+*En los enlaces se debe ser más específico con la información
+
+==========================================================================================
